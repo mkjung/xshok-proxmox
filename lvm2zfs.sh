@@ -42,11 +42,11 @@
 ##############################################################
 
 # The default LVM mount which will be replaced with ZFS
-mypart="/var/lib/vz"
+mypart="/data001"
 
 #install zfs and enable
-apt-get install -y zfsutils-linux
-modprobe zfs
+#apt-get install -y zfsutils-linux
+#modprobe zfs
 
 mydev=$(mount | grep "$mypart" | cut -d " " -f 1)
 ret=$?
